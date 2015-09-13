@@ -471,7 +471,7 @@ class User < ActiveRecord::Base
   def self.system_avatar_template(username)
     # TODO it may be worth caching this in a distributed cache, should be benched
     if SiteSetting.external_system_avatars_enabled
-      color = letter_avatar_color(username)
+      color = letter_avatar_color(username.downcase)
       url = SiteSetting.external_system_avatars_url.dup
       url.gsub! "{color}", color
       url.gsub! "{username}", username
