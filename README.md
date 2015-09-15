@@ -1,3 +1,11 @@
+##Commands to run
+`vagrant up`
+`vagrant ssh`
+`bundle exec rails s`
+`http://localhost:4000`
+- if you want to log in as a user eviltrout: `http://localhost:4000/session/eviltrout/become`
+
+
 <a href="http://www.discourse.org/">![Logo](images/discourse.png)</a>
 
 Discourse is the 100% open source discussion platform built for the next decade of the Internet. It works as:
