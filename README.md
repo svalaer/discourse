@@ -2,8 +2,23 @@
 - `vagrant up`
 - `vagrant ssh`
 - `bundle exec rails s`
+- `bundle exec sidekiq`
+- `mailcatcher --http-ip=0.0.0.0`
 - `http://localhost:4000`
-- if you want to log in as a user eviltrout: `http://localhost:4000/session/eviltrout/become`
+- if you want to log in as a user eviltrout: `http://localhost:4000/session/eviltrout/become
+
+## Testing
+If activly working on discourse run the following commands
+- `vagrant ssh`
+- `cd /vagrant`
+- `RAILS_ENV=test bundle exec rake db:migrate`
+- `bundle exec rake autospec p l=5`
+
+## Keeping your VM up to date
+Now you're in a virtual machine is almost ready to start developing. It's a good idea to perform the following instructions every time you pull from master to ensure your environment is still up to date.
+- `cd /vagrant`
+- `bundle install`
+- `bundle exec rake db:migrate`
 
 
 <a href="http://www.discourse.org/">![Logo](images/discourse.png)</a>
